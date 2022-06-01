@@ -4,17 +4,17 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
-using namespace sf;
+//using namespace sf;
 using namespace std;
 
 class Entidade {
 protected:
-    RectangleShape shape;
-    Texture* text;
-    Vector2f position;
-    Vector2f speed;
+    sf::RectangleShape shape;
+    sf::Texture* text;
+    sf::Vector2f position;
+    sf::Vector2f speed;
 public:
-    Entidade(Vector2f pos, Vector2f vel, const string texturePath = nullptr);
+    Entidade(sf::Vector2f pos, sf::Vector2f vel, const string texturePath = nullptr);
     ~Entidade();
     void atualizar(float t);
     void draw(sf::RenderWindow* window);

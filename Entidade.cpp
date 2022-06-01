@@ -1,16 +1,15 @@
 #include "Entidade.h"
 
-Entidade::Entidade(Vector2f pos, Vector2f vel, const string texturePath) : position{ pos }, speed{vel},
+Entidade::Entidade(sf::Vector2f pos, sf::Vector2f vel, const string texturePath) : position{ pos }, speed{vel},
 text{ nullptr } {
 
     if (texturePath != "") {
         text = new sf::Texture();
-        //todo carregar textura
         text->loadFromFile(texturePath);
     }
     
     shape.setTexture(text);
-    shape.setSize(Vector2f(200.0f, 200.0f));
+    shape.setSize(sf::Vector2f(200.0f, 200.0f));
     shape.setOrigin(shape.getSize());
 
 }

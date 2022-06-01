@@ -57,7 +57,7 @@ void ListaEntidades::atualizarEntidades(float t) {
 	}
 }
 
-void ListaEntidades::drawAll(RenderWindow* window) {
+void ListaEntidades::drawAll(sf::RenderWindow* window) {
 	Entidade* e = moveHead();
 
 	while (e) {

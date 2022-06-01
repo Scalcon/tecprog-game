@@ -152,12 +152,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Entidade.cpp" />
+    <ClCompile Include="Fase.cpp" />
     <ClCompile Include="ListaEntidades.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Principal.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Entidade.h" />
+    <ClInclude Include="Fase.h" />
     <ClInclude Include="ListaEntidades.h" />
     <ClInclude Include="Principal.h" />
   </ItemGroup>

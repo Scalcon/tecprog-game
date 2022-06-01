@@ -2,13 +2,13 @@
 
 #include <stdlib.h>
 #include <SFML/Graphics.hpp>
-#include "ListaEntidades.h"
+#include "Fase.h"
 
 class Principal {
 private:
-    RenderWindow* mainWindow;
-    Clock clock;
-    ListaEntidades poggers;
+    sf::RenderWindow* mainWindow;
+    sf::Clock clock;
+    Fase fase;
     bool end;
 
 public:

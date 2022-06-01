@@ -1,7 +1,7 @@
 #pragma once
 #include "Entidade.h"
 
-using namespace sf;
+//using namespace sf;
 
 class ListaEntidades {
 private:
@@ -40,7 +40,7 @@ public:
 	Entidade* moveNext();
 
 	void atualizarEntidades(float t);
-	void drawAll( RenderWindow* window );
+	void drawAll(sf::RenderWindow* window );
 	void destroyAll();
 
 
