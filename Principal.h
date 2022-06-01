@@ -2,12 +2,14 @@
 
 #include <stdlib.h>
 #include <SFML/Graphics.hpp>
-#include "Entidade.h"
+#include "ListaEntidades.h"
 
 class Principal {
 private:
-    sf::RenderWindow* mainWindow;
-    Entidade poggers;
+    RenderWindow* mainWindow;
+    Clock clock;
+    ListaEntidades poggers;
+    bool end;
 
 public:
     Principal();

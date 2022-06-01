@@ -1,16 +1,17 @@
 #include "Entidade.h"
 
-Entidade::Entidade(float xIn, float yIn, const std::string texturePath) : x{ xIn }, y{ yIn }, text{nullptr} {
+Entidade::Entidade(Vector2f pos, Vector2f vel, const string texturePath) : position{ pos }, speed{vel},
+text{ nullptr } {
 
     if (texturePath != "") {
         text = new sf::Texture();
+        //todo carregar textura
         text->loadFromFile(texturePath);
     }
     
     shape.setTexture(text);
-    std::cout << texturePath << std::endl;
-    shape.setSize(sf::Vector2f(200.0f, 200.0f));
-    shape.setOrigin(shape.getSize() / 2.0f);
+    shape.setSize(Vector2f(200.0f, 200.0f));
+    shape.setOrigin(shape.getSize());
 
 }
 
@@ -19,11 +20,10 @@ Entidade::~Entidade() {
         delete text;
 }
 
-void Entidade::atualizar() {
-    x += 8;
-    y += 6;
-
-    shape.setPosition(sf::Vector2f(x, y));
+void Entidade::atualizar(float t) {
+    
+    position += speed * t;
+    shape.setPosition(position);
 }
 
 void Entidade::draw(sf::RenderWindow* window) {
