@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ListaEntidades.h"
+#include "Personagem.h"
 
 class Fase {
 private:

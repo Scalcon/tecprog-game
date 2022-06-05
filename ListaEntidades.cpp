@@ -52,7 +52,7 @@ void ListaEntidades::atualizarEntidades(float t) {
 	Entidade* e = moveHead();
 
 	while (e) {
-		e->atualizar(t);
+		e->atualizar();
 		e = moveNext();
 	}
 }
