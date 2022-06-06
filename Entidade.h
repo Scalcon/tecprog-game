@@ -15,8 +15,8 @@ protected:
     sf::Vector2f size;
 public:
     Entidade(sf::Vector2f pos, sf::Vector2f tam, const string texturePath = nullptr);
-    ~Entidade();
-    void atualizar();
+    virtual ~Entidade();
+    virtual void atualizar(sf::RenderWindow* window) = 0;
     void draw(sf::RenderWindow* window);
 
 };

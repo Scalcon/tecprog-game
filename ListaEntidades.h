@@ -39,8 +39,8 @@ public:
 	Entidade* moveHead();
 	Entidade* moveNext();
 
-	void atualizarEntidades(float t);
-	void drawAll(sf::RenderWindow* window );
+	void atualizarEntidades(sf::RenderWindow* window);
+	void drawAll(sf::RenderWindow* window);
 	void destroyAll();
 
 

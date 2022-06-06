@@ -48,11 +48,11 @@ Entidade* ListaEntidades::moveNext() {
 	return current ? current->getInfo() : nullptr;
 }
 
-void ListaEntidades::atualizarEntidades(float t) {
+void ListaEntidades::atualizarEntidades(sf::RenderWindow* window) {
 	Entidade* e = moveHead();
 
 	while (e) {
-		e->atualizar();
+		e->atualizar(window);
 		e = moveNext();
 	}
 }

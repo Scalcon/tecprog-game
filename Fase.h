@@ -1,7 +1,8 @@
 #pragma once
 
 #include "ListaEntidades.h"
-#include "Personagem.h"
+#include "Jogador.h"
+#include "Inimigo.h"
 
 class Fase {
 private:
@@ -10,5 +11,5 @@ private:
 public:
 	Fase();
 	~Fase();
-	void iniciar(float t, sf::RenderWindow* window);
+	void iniciar(sf::RenderWindow* window);
 };
