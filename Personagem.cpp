@@ -1,12 +1,9 @@
 #include "Personagem.h"
 
-void Personagem::inicializar() {
-	shape.setPosition(position.x, position.y);
-}
-
-Personagem::Personagem(sf::Vector2f pos, sf::Vector2f tam, const string texturePath) :
-    Entidade(pos, tam, texturePath) {
-	inicializar();
+Personagem::Personagem(sf::Vector2f pos, sf::Vector2f tam) : Entidade(pos, tam) {
+	shape.setPosition(pos);
+	text1 = nullptr;
+	text2 = nullptr;
 }
 
 Personagem::~Personagem(){

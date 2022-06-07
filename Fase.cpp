@@ -2,8 +2,8 @@
 
 Fase::Fase() {
     //entidades.insert(new Entidade(sf::Vector2f(800.0f, 0.0f), sf::Vector2f(800.0f, 200.0f), ""));
-    entidades.insert(new Jogador(sf::Vector2f(200.0f, 200.0f), sf::Vector2f(200.0f, 200.0f), "uniboy.png"));
-    entidades.insert(new Inimigo(sf::Vector2f(200.0f, 200.0f), sf::Vector2f(200.0f, 200.0f), "inimigo_didi.png"));
+    entidades.insert(new Jogador(sf::Vector2f(200.0f, 400.0f), sf::Vector2f(200.0f, 200.0f)));
+    entidades.insert(new Inimigo(sf::Vector2f(200.0f, 400.0f), sf::Vector2f(200.0f, 200.0f)));
 }
 
 Fase::~Fase() {

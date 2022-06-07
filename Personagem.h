@@ -3,13 +3,10 @@
 
 class Personagem : public Entidade {
 protected:
-	//sf::Vector2f speed;
-
-	// Inicializadores
-	void inicializar();
+	sf::Texture* text1, * text2;
 
 public:
-	Personagem(sf::Vector2f pos, sf::Vector2f tam, const string texturePath);
+	Personagem(sf::Vector2f pos, sf::Vector2f tam);
 	~Personagem();
 
 	void colisaoPersonagemBorda(sf::RenderWindow* window);
