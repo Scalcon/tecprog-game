@@ -1,6 +1,6 @@
-#include "Jogador.h"
+#include "Universitario.h"
 
-void Jogador::movimentar()
+void Universitario::movimentar()
 {
 	if ((sf::Keyboard::isKeyPressed(sf::Keyboard::A)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)))
 	{
@@ -18,7 +18,7 @@ void Jogador::movimentar()
 	}
 }
 
-void Jogador::pular()
+void Universitario::pular()
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && !midPulo)
 	{
@@ -45,7 +45,7 @@ void Jogador::pular()
 	}
 }
 
-Jogador::Jogador(sf::Vector2f pos, sf::Vector2f tam) : Personagem(pos, tam) {
+Universitario::Universitario(sf::Vector2f pos, sf::Vector2f tam) : Personagem(pos, tam) {
 	midPulo = false;
 	gravidade = 0.f;
 
@@ -64,7 +64,7 @@ Jogador::Jogador(sf::Vector2f pos, sf::Vector2f tam) : Personagem(pos, tam) {
 	shape.setTexture(text1);
 }
 
-Jogador::~Jogador()
+Universitario::~Universitario()
 {
 	if (text1)
 		delete text1;
@@ -72,7 +72,7 @@ Jogador::~Jogador()
 		delete text2;
 }
 
-void Jogador::atualizar(sf::RenderWindow* window)
+void Universitario::atualizar(sf::RenderWindow* window)
 {
 	movimentar();
 	pular();

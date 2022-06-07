@@ -154,7 +154,8 @@
     <ClCompile Include="Entidade.cpp" />
     <ClCompile Include="Fase.cpp" />
     <ClCompile Include="Inimigo.cpp" />
-    <ClCompile Include="Jogador.cpp" />
+    <ClCompile Include="Inimigo_didi.cpp" />
+    <ClCompile Include="Universitario.cpp" />
     <ClCompile Include="ListaEntidades.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Personagem.cpp" />
@@ -164,7 +165,8 @@
     <ClInclude Include="Entidade.h" />
     <ClInclude Include="Fase.h" />
     <ClInclude Include="Inimigo.h" />
-    <ClInclude Include="Jogador.h" />
+    <ClInclude Include="Inimigo_didi.h" />
+    <ClInclude Include="Universitario.h" />
     <ClInclude Include="ListaEntidades.h" />
     <ClInclude Include="Personagem.h" />
     <ClInclude Include="Principal.h" />

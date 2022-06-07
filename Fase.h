@@ -1,8 +1,8 @@
 #pragma once
 
 #include "ListaEntidades.h"
-#include "Jogador.h"
-#include "Inimigo.h"
+#include "Universitario.h"
+#include "Inimigo_didi.h"
 
 class Fase {
 private:

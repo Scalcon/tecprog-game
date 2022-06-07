@@ -1,7 +1,7 @@
 #pragma once
 #include "Personagem.h"
 
-class Jogador : public Personagem {
+class Universitario : public Personagem {
 private:
 	bool midPulo;
 	float gravidade;
@@ -10,8 +10,8 @@ private:
 	void pular();
 
 public:
-	Jogador(sf::Vector2f pos, sf::Vector2f tam);
-	~Jogador();
+	Universitario(sf::Vector2f pos, sf::Vector2f tam);
+	~Universitario();
 
 
 	void atualizar(sf::RenderWindow* window);

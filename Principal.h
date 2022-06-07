@@ -16,9 +16,6 @@ private:
     // Variáveis
     bool end;
 
-    // Inicializadores
-    void inicializar();
-
 public:
     Principal();
     ~Principal();

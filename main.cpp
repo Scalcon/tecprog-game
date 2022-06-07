@@ -2,7 +2,7 @@
 
 #include "Principal.h"
 
-int main(){
+int main() {
 	Principal principal;
 	return 0;
 }

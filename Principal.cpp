@@ -1,13 +1,9 @@
 #include "Principal.h"
 
-void Principal::inicializar() {
+Principal::Principal() {
     mainWindow = new sf::RenderWindow(sf::VideoMode(800, 600), "poggers");
     mainWindow->setFramerateLimit(60);
     end = false;
-}
-
-Principal::Principal() {
-    inicializar();
     exec();
 }
 
