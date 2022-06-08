@@ -4,17 +4,17 @@ void Universitario::movimentar()
 {
 	if ((sf::Keyboard::isKeyPressed(sf::Keyboard::A)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)))
 	{
-		shape.move(-5.f, gravidade);
+		StaticObjetos::getGDC()->moverX(this, ESQUERDA, true);
 		shape.setTexture(text1);
 	}
 	else if ((sf::Keyboard::isKeyPressed(sf::Keyboard::D)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)))
 	{
-		shape.move(5.f, gravidade);
+		StaticObjetos::getGDC()->moverX(this, DIREITA, true);
 		shape.setTexture(text2);
 	}
 	else
 	{
-		shape.move(0.f, gravidade);
+		StaticObjetos::getGDC()->moverY(this, CIMA,true);
 	}
 }
 
@@ -46,8 +46,6 @@ void Universitario::pular()
 }
 
 Universitario::Universitario(sf::Vector2f pos, sf::Vector2f tam) : Personagem(pos, tam) {
-	midPulo = false;
-	gravidade = 0.f;
 
 	text1 = new sf::Texture();
 	if (!text1->loadFromFile("uniboy.png")) {

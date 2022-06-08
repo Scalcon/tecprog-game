@@ -4,9 +4,24 @@ Personagem::Personagem(sf::Vector2f pos, sf::Vector2f tam) : Entidade(pos, tam) 
 	shape.setPosition(pos);
 	text1 = nullptr;
 	text2 = nullptr;
+	midPulo = false;
+	gravidade = 0.f;
 }
 
 Personagem::~Personagem(){
+}
+
+float Personagem::getGravidade()
+{
+	return gravidade;
+}
+
+void Personagem::mudarDirecao()
+{
+	if (shape.getTexture() == text1)
+		shape.setTexture(text2);
+	else
+		shape.setTexture(text1);
 }
 
 void Personagem::colisaoPersonagemBorda(sf::RenderWindow* window)

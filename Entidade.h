@@ -21,6 +21,7 @@ public:
     virtual void atualizar(sf::RenderWindow* window) = 0;
     void draw(sf::RenderWindow* window);
 
+    sf::RectangleShape* getRect();
     bool getMostrar();
     void setMostrar(const bool val);
 

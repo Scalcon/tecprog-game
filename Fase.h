@@ -3,6 +3,7 @@
 #include "ListaEntidades.h"
 #include "Universitario.h"
 #include "Inimigo_didi.h"
+#include "StaticObjetos.h"
 
 class Fase {
 private:

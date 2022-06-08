@@ -1,11 +1,8 @@
 #pragma once
-#include "Personagem.h"
+#include "StaticObjetos.h"
 
 class Universitario : public Personagem {
 private:
-	bool midPulo;
-	float gravidade;
-
 	void movimentar();
 	void pular();
 

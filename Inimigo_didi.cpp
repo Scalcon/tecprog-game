@@ -2,16 +2,15 @@
 
 void Inimigo_didi::movimentar(sf::RenderWindow* window)
 {
-	static bool horizontal = false, vertical = false;
 	if (!horizontal) {
-		shape.move(-2.f, 0.f);
+		StaticObjetos::getGDC()->moverX(this, ESQUERDA, true);
 		if (shape.getGlobalBounds().left <= 0.f) {
 			horizontal = true;
 			shape.setTexture(text2);
 		}
 	}
 	else {
-		shape.move(2.f, 0.f);
+		StaticObjetos::getGDC()->moverX(this, DIREITA, true);
 		if ((shape.getGlobalBounds().left + shape.getGlobalBounds().width) >= window->getSize().x) {
 			horizontal = false;
 			shape.setTexture(text1);
@@ -21,6 +20,7 @@ void Inimigo_didi::movimentar(sf::RenderWindow* window)
 
 Inimigo_didi::Inimigo_didi(sf::Vector2f pos, sf::Vector2f tam, Latinha* latinha) : Inimigo(pos, tam), latinha{ latinha }
 {
+	horizontal = false;
 	text1 = new sf::Texture();
 	if (!text1->loadFromFile("inimigo_didi.png")) {
 		delete text1;
@@ -43,6 +43,12 @@ Inimigo_didi::~Inimigo_didi()
 	if (text2)
 		delete text2;
 	delete latinha;
+}
+
+void Inimigo_didi::mudarDirecao()
+{
+	Personagem::mudarDirecao();
+	horizontal ? horizontal = false : horizontal = true;
 }
 
 void Inimigo_didi::atualizar(sf::RenderWindow* window)

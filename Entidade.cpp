@@ -26,3 +26,8 @@ void Entidade::setMostrar(const bool val) {
 void Entidade::setPosicao(sf::Vector2f pos) {
     shape.setPosition(pos);
 }
+
+sf::RectangleShape* Entidade::getRect()
+{
+    return &shape;
+}
