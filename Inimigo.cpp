@@ -12,3 +12,7 @@ void Inimigo::atualizar(sf::RenderWindow* window)
 {
 	Personagem::atualizar(window);
 }
+
+void Inimigo::colidir(Entidade* p, Entidade* e, int dir)
+{
+}

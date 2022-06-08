@@ -17,6 +17,7 @@ public:
 	GerenciadorDeColisao();
 	~GerenciadorDeColisao();
 
+	void setUniBoy(Personagem* p);
 	void inserirPersonagem(Personagem* p);
 
 	void moverX(Personagem* p, Direcoes d);

@@ -10,6 +10,7 @@ class Entidade {
 private:
     bool mostrar;
 protected:
+
     sf::RectangleShape shape;
     sf::Vector2f position;
     sf::Vector2f size;
@@ -24,7 +25,7 @@ public:
     sf::RectangleShape* getRect();
     bool getMostrar();
     void setMostrar(const bool val);
-
     void setPosicao(sf::Vector2f pos);
 
+    virtual void colidir(Entidade* e, int dir) = 0;
 };

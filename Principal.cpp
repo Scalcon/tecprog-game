@@ -1,7 +1,7 @@
 #include "Principal.h"
 
 Principal::Principal() {
-    mainWindow = new sf::RenderWindow(sf::VideoMode(800, 600), "poggers");
+    mainWindow = new sf::RenderWindow(sf::VideoMode(800, 600), "poggers", sf::Style::Close | sf::Style::Titlebar);
     mainWindow->setFramerateLimit(60);
     end = false;
     exec();

@@ -8,5 +8,7 @@ public:
 	~Inimigo();
 
 	void atualizar(sf::RenderWindow* window);
+
+	virtual void colidir(Entidade* p, Entidade* e, int dir);
 };
 

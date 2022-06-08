@@ -12,5 +12,7 @@ public:
 
 
 	void atualizar(sf::RenderWindow* window);
+	
+	void colidir(Entidade* e, int dir);
 };
 

@@ -6,7 +6,6 @@
 
 class Inimigo_didi : public Inimigo {
 private:
-	bool horizontal;
 	void movimentar(sf::RenderWindow* window);
 	Latinha* latinha;
 
@@ -18,4 +17,6 @@ public:
 
 	void atualizar(sf::RenderWindow* window);
 	void atirarLatinha();
+
+	void colidir(Entidade* e, int dir);
 };

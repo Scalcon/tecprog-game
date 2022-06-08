@@ -5,10 +5,10 @@ Fase::Fase() {
     Personagem* u = new Universitario(sf::Vector2f(200.0f, 400.0f), sf::Vector2f(200.0f, 200.0f));
     Latinha* latinha = new Latinha(sf::Vector2f(200.0f, 400.0f), sf::Vector2f(100.0f, 100.0f), sf::Vector2f(10.0f, 0.0f));
     Personagem* i = new Inimigo_didi(sf::Vector2f(700.0f, 400.0f), sf::Vector2f(200.0f, 200.0f), latinha);
-    entidades.insert(u);
     entidades.insert(i);
     entidades.insert(latinha);
-    StaticObjetos::getGDC()->inserirPersonagem(u);
+    entidades.insert(u);
+    StaticObjetos::getGDC()->setUniBoy(u);
     StaticObjetos::getGDC()->inserirPersonagem(i);
 }
 

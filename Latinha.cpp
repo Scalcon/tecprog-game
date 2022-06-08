@@ -10,3 +10,7 @@ Latinha::Latinha(sf::Vector2f pos, sf::Vector2f tam, sf::Vector2f vel, const flo
 	shape.setTexture(text1);*/
 	shape.setFillColor(sf::Color::White);
 }
+
+void Latinha::colidir(Entidade* e, int dir)
+{
+}

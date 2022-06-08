@@ -4,44 +4,44 @@ void Universitario::movimentar()
 {
 	if ((sf::Keyboard::isKeyPressed(sf::Keyboard::A)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)))
 	{
-		StaticObjetos::getGDC()->moverX(this, ESQUERDA, true);
+		StaticObjetos::getGDC()->moverX(this, ESQUERDA);
 		shape.setTexture(text1);
 	}
 	else if ((sf::Keyboard::isKeyPressed(sf::Keyboard::D)) || (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)))
 	{
-		StaticObjetos::getGDC()->moverX(this, DIREITA, true);
+		StaticObjetos::getGDC()->moverX(this, DIREITA);
 		shape.setTexture(text2);
 	}
+	if (getGravidade() < 0)
+		StaticObjetos::getGDC()->moverY(this, CIMA);
 	else
-	{
-		StaticObjetos::getGDC()->moverY(this, CIMA,true);
-	}
+		StaticObjetos::getGDC()->moverY(this, BAIXO);
 }
 
 void Universitario::pular()
 {
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && !midPulo)
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && !getMidPulo())
 	{
-		midPulo = true;
-		gravidade = -20.f;
-		shape.move(0.f, gravidade);
-		gravidade += 1.0f;
+		setMidPulo(true);
+		setGravidade(-25.f);
+		shape.move(0.f, getGravidade());
+		setGravidade(getGravidade() + 1.f);
 	}
-	else if (midPulo)
+	else if (getMidPulo())
 	{
 		if (shape.getPosition().y < 400.f)
 		{
-			gravidade += 1.0f;
+			setGravidade(getGravidade() + 1.f);
 		}
 		else
 		{
-			midPulo = false;
-			gravidade = 0.f;
+			setMidPulo(false);
+			setGravidade(0.f);
 		}
 	}
 	else
 	{
-		midPulo = true;
+		setMidPulo(true);
 	}
 }
 
@@ -75,4 +75,15 @@ void Universitario::atualizar(sf::RenderWindow* window)
 	movimentar();
 	pular();
 	Personagem::atualizar(window);
+}
+
+void Universitario::colidir(Entidade* e, int dir) {
+	if (dir == 0) {
+		shape.move(5.f, getGravidade());
+		e->getRect()->move(-5.f, 0.f);
+	}
+	else if (dir == 1) {
+		shape.move(-5.f, getGravidade());
+		e->getRect()->move(5.f, 0.f);
+	}
 }

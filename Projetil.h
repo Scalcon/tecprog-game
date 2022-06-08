@@ -10,5 +10,7 @@ public:
 	~Projetil();
 	void atualizar(sf::RenderWindow* window);
 	void atualizarAtivo();
+
+	virtual void colidir(Entidade* e, int dir);
 };
 

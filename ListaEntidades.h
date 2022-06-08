@@ -36,8 +36,8 @@ public:
 
 	void insert(Entidade* info);
 	void deleteAll();
-	Entidade* moveHead();
-	Entidade* moveNext();
+	ElementoLista* moveHead();
+	ElementoLista* moveNext();
 
 	void atualizarEntidades(sf::RenderWindow* window);
 	void drawAll(sf::RenderWindow* window);

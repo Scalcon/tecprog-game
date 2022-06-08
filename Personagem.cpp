@@ -6,14 +6,35 @@ Personagem::Personagem(sf::Vector2f pos, sf::Vector2f tam) : Entidade(pos, tam) 
 	text2 = nullptr;
 	midPulo = false;
 	gravidade = 0.f;
+	horizontal = false;
 }
 
 Personagem::~Personagem(){
 }
 
+void Personagem::setGravidade(float g)
+{
+	gravidade = g;
+}
+
 float Personagem::getGravidade()
 {
 	return gravidade;
+}
+
+void Personagem::setMidPulo(bool m)
+{
+	midPulo = m;
+}
+
+bool Personagem::getMidPulo()
+{
+	return midPulo;
+}
+
+const bool Personagem::getDir() const
+{
+	return horizontal;
 }
 
 void Personagem::mudarDirecao()
@@ -22,6 +43,7 @@ void Personagem::mudarDirecao()
 		shape.setTexture(text2);
 	else
 		shape.setTexture(text1);
+	horizontal ? horizontal = false : horizontal = true;
 }
 
 void Personagem::colisaoPersonagemBorda(sf::RenderWindow* window)
@@ -48,4 +70,7 @@ void Personagem::colisaoPersonagemBorda(sf::RenderWindow* window)
 
 void Personagem::atualizar(sf::RenderWindow* window) {
 	colisaoPersonagemBorda(window);
+}
+
+void Personagem::colidir(Entidade* e, int dir) {
 }

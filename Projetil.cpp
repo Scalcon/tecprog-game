@@ -26,3 +26,7 @@ void Projetil::atualizarAtivo() {
 	}
 
 }
+
+void Projetil::colidir(Entidade* e, int dir)
+{
+}
