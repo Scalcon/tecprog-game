@@ -39,7 +39,8 @@ Inimigo_didi::~Inimigo_didi()
 		delete text1;
 	if (text2)
 		delete text2;
-	latinha->setMostrar(false);
+	if (latinha)
+		latinha->setMostrar(false);
 	text1 = nullptr;
 	text2 = nullptr;
 	latinha = nullptr;
@@ -54,8 +55,10 @@ void Inimigo_didi::atualizar(sf::RenderWindow* window)
 {
 	Inimigo::atualizar(window);
 	movimentar(window);
-	atirarLatinha();
-	latinha->atualizar(window);
+	if (latinha) {
+		latinha->atualizar(window);
+		atirarLatinha();
+	}
 }
 
 void Inimigo_didi::atirarLatinha(){
@@ -66,14 +69,10 @@ void Inimigo_didi::atirarLatinha(){
 void Inimigo_didi::colidir(Entidade* e, int dir) {
 	if (dir == 0) {
 		shape.move(5.f, getGravidade());
-		//shape.move(e->getRect()->getPosition().x + e->getRect()->getGlobalBounds().width + 5.f, 0.f);
 		mudarDirecao();
-		//e->getRect()->move(-5.f, 0.f);
 	}
 	else if (dir == 1) {
 		shape.move(-5.f, getGravidade());
-		//shape.move(e->getRect()->getPosition().x - 5.f, 0.f);
 		mudarDirecao();
-		//e->getRect()->move(5.f, 0.f);
 	}
 }

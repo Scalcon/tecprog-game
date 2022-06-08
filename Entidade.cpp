@@ -4,7 +4,7 @@ Entidade::Entidade(sf::Vector2f pos, sf::Vector2f tam) : position(pos), size(tam
     text1 = nullptr;
     text2 = nullptr;
     mostrar = true;
-    shape.setPosition(pos);
+    shape.setPosition(position);
     shape.setSize(size);
 }
 

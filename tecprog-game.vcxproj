@@ -153,9 +153,13 @@
   <ItemGroup>
     <ClCompile Include="Entidade.cpp" />
     <ClCompile Include="Fase.cpp" />
+    <ClCompile Include="Fase1.cpp" />
     <ClCompile Include="GerenciadorDeColisao.cpp" />
     <ClCompile Include="Inimigo.cpp" />
     <ClCompile Include="Inimigo_didi.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Obstaculo.cpp" />
+    <ClCompile Include="Plataforma.cpp" />
     <ClCompile Include="StaticObjetos.cpp" />
     <ClCompile Include="Latinha.cpp" />
     <ClCompile Include="Projetil.cpp" />
@@ -168,9 +172,13 @@
   <ItemGroup>
     <ClInclude Include="Entidade.h" />
     <ClInclude Include="Fase.h" />
+    <ClInclude Include="Fase1.h" />
     <ClInclude Include="GerenciadorDeColisao.h" />
     <ClInclude Include="Inimigo.h" />
     <ClInclude Include="Inimigo_didi.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="Obstaculo.h" />
+    <ClInclude Include="Plataforma.h" />
     <ClInclude Include="StaticObjetos.h" />
     <ClInclude Include="Latinha.h" />
     <ClInclude Include="Projetil.h" />

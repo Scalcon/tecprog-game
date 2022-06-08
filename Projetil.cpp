@@ -2,7 +2,7 @@
 
 Projetil::Projetil(sf::Vector2f pos, sf::Vector2f tam, sf::Vector2f vel, const float tempo) : Entidade(pos, tam), velocidade{ vel },
 tempoAtivo{tempo} {
-	setMostrar(false);
+	setMostrar(true);
 }
 
 Projetil::~Projetil() {}
