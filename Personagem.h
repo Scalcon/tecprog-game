@@ -2,8 +2,6 @@
 #include "Entidade.h"
 
 class Personagem : public Entidade {
-protected:
-	sf::Texture* text1, * text2;
 
 public:
 	Personagem(sf::Vector2f pos, sf::Vector2f tam);

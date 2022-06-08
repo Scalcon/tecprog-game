@@ -19,7 +19,7 @@ void Inimigo_didi::movimentar(sf::RenderWindow* window)
 	}
 }
 
-Inimigo_didi::Inimigo_didi(sf::Vector2f pos, sf::Vector2f tam) : Inimigo(pos, tam)
+Inimigo_didi::Inimigo_didi(sf::Vector2f pos, sf::Vector2f tam, Latinha* latinha) : Inimigo(pos, tam), latinha{ latinha }
 {
 	text1 = new sf::Texture();
 	if (!text1->loadFromFile("inimigo_didi.png")) {
@@ -42,10 +42,18 @@ Inimigo_didi::~Inimigo_didi()
 		delete text1;
 	if (text2)
 		delete text2;
+	delete latinha;
 }
 
 void Inimigo_didi::atualizar(sf::RenderWindow* window)
 {
 	Inimigo::atualizar(window);
 	movimentar(window);
+	atirarLatinha();
+	latinha->atualizar(window);
+}
+
+void Inimigo_didi::atirarLatinha(){
+	latinha->setPosicao(this->shape.getPosition());
+	latinha->setMostrar(true);
 }

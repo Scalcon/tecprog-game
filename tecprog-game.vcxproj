@@ -29,7 +29,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -155,6 +155,8 @@
     <ClCompile Include="Fase.cpp" />
     <ClCompile Include="Inimigo.cpp" />
     <ClCompile Include="Inimigo_didi.cpp" />
+    <ClCompile Include="Latinha.cpp" />
+    <ClCompile Include="Projetil.cpp" />
     <ClCompile Include="Universitario.cpp" />
     <ClCompile Include="ListaEntidades.cpp" />
     <ClCompile Include="main.cpp" />
@@ -166,6 +168,8 @@
     <ClInclude Include="Fase.h" />
     <ClInclude Include="Inimigo.h" />
     <ClInclude Include="Inimigo_didi.h" />
+    <ClInclude Include="Latinha.h" />
+    <ClInclude Include="Projetil.h" />
     <ClInclude Include="Universitario.h" />
     <ClInclude Include="ListaEntidades.h" />
     <ClInclude Include="Personagem.h" />
