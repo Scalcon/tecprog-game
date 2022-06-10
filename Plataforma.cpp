@@ -1,9 +1,16 @@
 #include "Plataforma.h"
 
-Plataforma::Plataforma(sf::Vector2f pos, sf::Vector2f tam, const int tipo) : Obstaculo(pos, tam), tipo{ tipo }{
+Plataforma::Plataforma(sf::Vector2f pos, const int tipo) : Obstaculo(pos, sf::Vector2f(PLATAFORMA_LARGURA, PLATAFORMA_ALTURA)), tipo{ tipo }{
 	if (tipo == 1) {
 		//todo carregar texturas corretas
-		shape.setFillColor(sf::Color::Blue);
+		text1 = new sf::Texture();
+		if (!text1->loadFromFile("plataforma1.png")) {
+			delete text1;
+			text1 = nullptr;
+		}
+		shape.setFillColor(sf::Color::White);
+		shape.setTexture(text1);
+		//shape.setFillColor(sf::Color::Blue);
 	}
 	else {
 		shape.setFillColor(sf::Color::Red);

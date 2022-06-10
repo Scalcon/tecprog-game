@@ -5,6 +5,7 @@
 #include "Inimigo_didi.h"
 #include "InimigoPassaro.h"
 #include "Plataforma.h"
+#include "Espinhos.h"
 #include "StaticObjetos.h"
 
 #define FASE_X 10
@@ -13,6 +14,7 @@
 class Fase {
 private:
 	ListaEntidades entidades;
+protected:
 	float sizeX, sizeY;
 
 public:
@@ -24,6 +26,6 @@ public:
 	void constroiJogador(sf::Vector2f pos);
 	void constroiInimigoDidi(sf::Vector2f pos);
 	void constroiInimigoPassaro(sf::Vector2f pos);
-
+	void constroiEspinhos(sf::Vector2f pos);
 	//void carregarEntidades(char* ents, int m, int n);
 };

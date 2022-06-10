@@ -121,7 +121,7 @@ void ListaEntidades::ElementoLista::setInfo(Entidade* Info) {
 }
 
 Entidade* ListaEntidades::ElementoLista::getInfo() {
-	return info;
+	return info ? info : nullptr;
 }
 
 void ListaEntidades::ElementoLista::setPrev(ElementoLista* Prev) {

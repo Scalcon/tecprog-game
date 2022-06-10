@@ -4,8 +4,8 @@
 
 //#include "StaticObjetos.h"
 
-#define INIMIGO_DIDI_ALTURA 200.0
-#define INIMIGO_DIDI_LARGURA 200.0
+#define INIMIGO_DIDI_ALTURA 100.0
+#define INIMIGO_DIDI_LARGURA 100.0
 
 class Inimigo_didi : public Inimigo {
 private:

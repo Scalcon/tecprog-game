@@ -25,7 +25,7 @@ Telas Fase::executar(sf::RenderWindow* window) {
 }
 
 void Fase::constroiPlataformas(sf::Vector2f pos) {
-    entidades.insert(new Plataforma(pos, sf::Vector2f(100.f, 50.f), 1));
+    entidades.insert(new Plataforma(pos, 1));
 }
 
 void Fase::constroiJogador(sf::Vector2f pos) {
@@ -48,3 +48,6 @@ void Fase::constroiInimigoPassaro(sf::Vector2f pos) {
     StaticObjetos::getGDC()->inserirPersonagem(inimigo);
 }
 
+void Fase::constroiEspinhos(sf::Vector2f pos) {
+    entidades.insert(new Espinhos(pos));
+}

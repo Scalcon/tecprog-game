@@ -1,8 +1,8 @@
 #pragma once
 #include "StaticObjetos.h"
 
-#define UNIBOY_ALTURA 200.0
-#define UNIBOY_LARGURA 200.0
+#define UNIBOY_ALTURA 100.0
+#define UNIBOY_LARGURA 80.0
 
 class Universitario : public Personagem {
 private:
