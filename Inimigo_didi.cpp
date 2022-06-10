@@ -16,8 +16,8 @@ void Inimigo_didi::movimentar(sf::RenderWindow* window)
 	}
 }
 
-Inimigo_didi::Inimigo_didi(sf::Vector2f pos, sf::Vector2f tam, Latinha* latinha) : Inimigo(pos, tam), latinha{ latinha }
-{
+Inimigo_didi::Inimigo_didi(sf::Vector2f pos, Latinha* latinha) : Inimigo(pos, sf::Vector2f(INIMIGO_DIDI_LARGURA, INIMIGO_DIDI_ALTURA) ),
+latinha{ latinha } {
 	text1 = new sf::Texture();
 	if (!text1->loadFromFile("inimigo_didi.png")) {
 		delete text1;
@@ -46,11 +46,6 @@ Inimigo_didi::~Inimigo_didi()
 	latinha = nullptr;
 }
 
-void Inimigo_didi::mudarDirecao()
-{
-	Personagem::mudarDirecao();
-}
-
 void Inimigo_didi::atualizar(sf::RenderWindow* window)
 {
 	Inimigo::atualizar(window);
@@ -66,13 +61,3 @@ void Inimigo_didi::atirarLatinha(){
 	latinha->setMostrar(true);
 }
 
-void Inimigo_didi::colidir(Entidade* e, int dir) {
-	if (dir == 0) {
-		shape.move(5.f, getGravidade());
-		mudarDirecao();
-	}
-	else if (dir == 1) {
-		shape.move(-5.f, getGravidade());
-		mudarDirecao();
-	}
-}

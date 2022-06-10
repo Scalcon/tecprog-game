@@ -1,13 +1,16 @@
 #pragma once
 #include "StaticObjetos.h"
 
+#define UNIBOY_ALTURA 200.0
+#define UNIBOY_LARGURA 200.0
+
 class Universitario : public Personagem {
 private:
 	void movimentar();
 	void pular();
 
 public:
-	Universitario(sf::Vector2f pos, sf::Vector2f tam);
+	Universitario(sf::Vector2f pos);
 	~Universitario();
 
 

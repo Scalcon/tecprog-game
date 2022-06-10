@@ -1,5 +1,6 @@
 #pragma once
 #include "Personagem.h"
+#include "StaticObjetos.h"
 class Inimigo : public Personagem {
 protected:
 
@@ -8,7 +9,8 @@ public:
 	~Inimigo();
 
 	void atualizar(sf::RenderWindow* window);
+	void mudarDirecao();
 
-	virtual void colidir(Entidade* p, Entidade* e, int dir);
+	void colidir(Entidade* p, Entidade* e, int dir);
 };
 

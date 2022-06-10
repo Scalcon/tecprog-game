@@ -29,7 +29,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -156,6 +156,7 @@
     <ClCompile Include="Fase1.cpp" />
     <ClCompile Include="GerenciadorDeColisao.cpp" />
     <ClCompile Include="Inimigo.cpp" />
+    <ClCompile Include="InimigoPassaro.cpp" />
     <ClCompile Include="Inimigo_didi.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Obstaculo.cpp" />
@@ -175,6 +176,7 @@
     <ClInclude Include="Fase1.h" />
     <ClInclude Include="GerenciadorDeColisao.h" />
     <ClInclude Include="Inimigo.h" />
+    <ClInclude Include="InimigoPassaro.h" />
     <ClInclude Include="Inimigo_didi.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Obstaculo.h" />

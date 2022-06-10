@@ -45,7 +45,7 @@ void Universitario::pular()
 	}
 }
 
-Universitario::Universitario(sf::Vector2f pos, sf::Vector2f tam) : Personagem(pos, tam) {
+Universitario::Universitario(sf::Vector2f pos) : Personagem(pos, sf::Vector2f(UNIBOY_LARGURA, UNIBOY_ALTURA)) {
 
 	text1 = new sf::Texture();
 	if (!text1->loadFromFile("uniboy.png")) {

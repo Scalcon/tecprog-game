@@ -1,6 +1,9 @@
 #pragma once
 #include "Obstaculo.h"
 
+#define PLATAFORMA_ALTURA 60
+#define PLATAFORMA_LARGURA 80
+
 class Plataforma : public Obstaculo {
 private:
 	const int tipo;
